@@ -1,0 +1,171 @@
+:root {
+  --cream: #fdf8f3;
+  --sage: #a8b9a0;
+  --sage-dark: #7e8f75;
+  --light-brown: #d6bfa7;
+  --brown-dark: #5c3a1c;
+  --white: #ffffff;
+  --green: #4caf50;
+  --red: #f44336;
+  --yellow: #ff9800;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-transaksi {
+  min-height: 100vh;
+  background-color: var(--cream);
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--brown-dark);
+}
+
+.transaksi-tilte {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--brown-dark);
+}
+
+.tanggal-transaksi {
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.filter-input-tanggal {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--light-brown);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--white);
+}
+
+.status-message-transaksi {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+/* Flexbox horizontal grid */
+.transaksi-data-parent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.data-transaksi {
+  flex: 1 1 300px;
+  max-width: 320px;
+  background-color: var(--white);
+  border-left: 5px solid var(--sage);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.data-transaksi:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.transaksi-info p,
+.item-menu ul {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.item-menu ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.transaksi-actions {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-transaksi {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.done-btn {
+  background-color: var(--green);
+}
+
+.done-btn:hover {
+  background-color: #388e3c;
+}
+
+.cancel-btn {
+  background-color: var(--red);
+}
+
+.cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Status Color Coding */
+.status-completed {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.status-cancelled {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.status-pending_payment {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .data-transaksi {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .transaksi-actions {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .btn {
+    flex: 1;
+    margin: 0 5px;
+  }
+}

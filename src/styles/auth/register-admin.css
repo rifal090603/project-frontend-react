@@ -1,0 +1,115 @@
+:root {
+  --cream: #f5f0e6;
+  --dark-brown: #4b2e2e;
+  --light-brown: #a47148;
+  --text-dark: #2e1e1e;
+  --input-bg: #fffaf3;
+  --error-red: #b00020;
+}
+
+.register-admin {
+  min-height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.register-form-wrapper-admin {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  max-width: 480px;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.register-title-admin {
+  margin-bottom: 2rem;
+  color: var(--dark-brown);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form-group-admin,
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label-admin {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--light-brown);
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--light-brown);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--dark-brown);
+  outline: none;
+}
+
+.register-button-admin {
+  background-color: var(--dark-brown);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-button-admin:hover {
+  background-color: #3b211f;
+}
+
+.login-redirect-admin {
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.login-redirect-admin a {
+  color: var(--light-brown);
+  text-decoration: none;
+}
+
+.login-redirect-admin a:hover {
+  text-decoration: underline;
+}
+
+.form-error {
+  background-color: #ffeaea;
+  color: var(--error-red);
+  padding: 0.6rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .register-form-wrapper-admin {
+    padding: 1.5rem;
+  }
+
+  .register-title-admin {
+    font-size: 1.5rem;
+  }
+
+  .register-button-admin {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}

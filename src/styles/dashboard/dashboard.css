@@ -1,0 +1,94 @@
+/* Warna dasar */
+:root {
+  --cream: #f5f0e6;
+  --dark-brown: #4b2e2e;
+  --medium-brown: #7a5230;
+  --light-brown: #d7b89c;
+  --text-color: #2d1e1e;
+}
+
+/* Global dashboard body */
+.dashboard-body {
+  background-color: var(--cream);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+}
+
+/* Navbar */
+.dashboard-navbar {
+  background-color: var(--light-brown);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-navbar-brand {
+  color: var(--dark-brown);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.dashboard-navbar-brand:hover {
+  color: var(--medium-brown);
+}
+
+.dashboard-nav-link {
+  color: var(--dark-brown);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.dashboard-nav-link:hover,
+.dashboard-nav-link.active {
+  color: var(--cream);
+  background-color: var(--medium-brown);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Toggler for mobile */
+.dashboard-navbar-toggler {
+  border-color: var(--medium-brown);
+}
+
+/* Container utama */
+.dashboard-main-content {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography */
+.dashboard-main-content h1,
+.dashboard-main-content h2,
+.dashboard-main-content h3 {
+  color: var(--dark-brown);
+  font-weight: 700;
+}
+
+/* Card atau section tambahan */
+.dashboard-card {
+  background-color: var(--cream);
+  border: 1px solid var(--light-brown);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(75, 46, 46, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Tombol */
+.btn-dashboard {
+  background-color: var(--medium-brown);
+  color: var(--cream);
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dashboard:hover {
+  background-color: var(--dark-brown);
+}

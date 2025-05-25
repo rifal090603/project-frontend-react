@@ -1,0 +1,83 @@
+/* ========== Umum ========== */
+body.dashboard-body {
+    background-color: #fdf6ee; /* Cream lembut */
+    font-family: 'Poppins', sans-serif;
+    color: #4e342e; /* Coklat tua */
+}
+
+/* ========== Heading ========== */
+h1 {
+    font-weight: 700;
+    color: #5d4037; /* Coklat dalam */
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* ========== Formulir ========== */
+.form-tambah-menu {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control, .form-select {
+    background-color: #f4e1d2; /* Cream terang */
+    border: 1px solid #a1887f; /* Coklat muda */
+    border-radius: 8px;
+    color: #4e342e;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #5d4037; /* Coklat lebih gelap */
+    box-shadow: 0 0 5px rgba(93, 64, 55, 0.4);
+}
+
+/* ========== Button ========== */
+button[type="submit"] {
+    background-color: #4caf50; /* Hijau premium */
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #388e3c; /* Hijau lebih gelap */
+}
+
+/* ========== Button Kembali ========== */
+.text-center a {
+    text-decoration: none;
+    background-color: #d32f2f; /* Merah lembut */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.text-center a:hover {
+    background-color: #c2185b; /* Merah lebih gelap */
+}
+
+/* ========== Gambar Menu (Preview) ========== */
+.form-label {
+    font-weight: bold;
+    color: #5d4037; /* Coklat dalam */
+}
+
+.mb-4 .form-control {
+    padding: 12px 10px;
+}
+
+/* ========== Spacing & Margin ========== */
+.mt-4 {
+    margin-top: 3rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem !important;
+}

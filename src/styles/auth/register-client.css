@@ -1,0 +1,110 @@
+/* Warna utama */
+:root {
+    --cream: #f5f0e6;
+    --dark-brown: #4b2e2e;
+    --light-brown: #a47148;
+    --text-dark: #2e1e1e;
+    --input-bg: #fffaf3;
+    --error-red: #b00020;
+  }
+  
+  .register-client {
+    max-width: 400px;
+    margin: 5vh auto;
+    padding: 2rem;
+    background-color: var(--cream);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .register-client h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-brown);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .register-client form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .register-client label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--light-brown);
+  }
+  
+  .register-client input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--light-brown);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    transition: border-color 0.3s;
+  }
+  
+  .register-client input:focus {
+    border-color: var(--dark-brown);
+    outline: none;
+  }
+  
+  .register-client button {
+    padding: 0.75rem;
+    background-color: var(--dark-brown);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .register-client button:hover {
+    background-color: #3b211f;
+  }
+  
+  .register-client p {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .register-client a {
+    color: var(--light-brown);
+    text-decoration: none;
+  }
+  
+  .register-client a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    color: var(--error-red);
+    background-color: #ffeaea;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsiveness */
+  @media screen and (max-width: 480px) {
+    .register-client {
+      padding: 1.5rem 1rem;
+      margin: 2vh auto;
+    }
+  
+    .register-client h2 {
+      font-size: 1.5rem;
+    }
+  
+    .register-client button {
+      font-size: 0.95rem;
+    }
+  }
+  

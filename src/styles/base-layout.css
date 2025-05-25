@@ -1,0 +1,146 @@
+/* Warna tema */
+:root {
+    --cream: #fdf8f1;
+    --dark-brown: #4b2e2e;
+    --medium-brown: #7a5230;
+    --light-brown: #d7b89c;
+    --gold-accent: #c9a96e;
+    --text-color: #3a2a2a;
+  }
+  
+  /* Body umum */
+  body {
+    background-color: var(--cream);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  
+  /* Navbar */
+  .base-navbar {
+    background-color: var(--light-brown);
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(75, 46, 46, 0.15);
+  }
+  
+  .base-navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--dark-brown);
+  }
+  
+  .base-navbar-brand:hover {
+    color: var(--medium-brown);
+  }
+  
+  .base-nav-link,
+  .base-dropdown-toggle {
+    color: var(--dark-brown) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .base-nav-link:hover,
+  .base-nav-link.active,
+  .base-dropdown-toggle:hover {
+    background-color: var(--medium-brown);
+    color: var(--cream) !important;
+    border-radius: 0.5rem;
+  }
+  
+  .base-dropdown-menu {
+    background-color: var(--cream);
+    border: 1px solid var(--medium-brown);
+  }
+  
+  .base-dropdown-item {
+    color: var(--dark-brown);
+    padding: 0.5rem 1rem;
+  }
+  
+  .base-dropdown-item:hover {
+    background-color: var(--light-brown);
+    color: var(--text-color);
+  }
+  
+  .base-dropdown-divider {
+    border-color: var(--medium-brown);
+  }
+  
+  /* Search bar */
+  .base-search-form {
+    margin-right: 1rem;
+  }
+  
+  .base-search-input {
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: 1px solid var(--medium-brown);
+    background-color: var(--cream);
+    color: var(--text-color);
+  }
+  
+  .base-search-button {
+    background-color: var(--medium-brown);
+    color: var(--cream);
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .base-search-button:hover {
+    background-color: var(--dark-brown);
+  }
+  
+  /* Keranjang */
+  .base-cart-button {
+    border-color: var(--gold-accent);
+    color: var(--dark-brown);
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .base-cart-button:hover {
+    background-color: var(--medium-brown);
+    color: var(--cream);
+  }
+  
+  .base-cart-badge {
+    font-size: 0.75rem;
+    padding: 0.3em 0.6em;
+    background-color: #c0392b;
+  }
+  
+  /* Main content */
+  .base-main-content {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(75, 46, 46, 0.12);
+  }
+  
+  /* Footer */
+  .base-footer {
+    background-color: var(--dark-brown);
+    color: var(--cream);
+  }
+  
+  .base-footer-text {
+    margin: 0;
+  }
+  
+  .base-footer-socials a {
+    color: var(--gold-accent);
+    transition: color 0.3s ease;
+  }
+  
+  .base-footer-socials a:hover {
+    color: var(--cream);
+  }
+  

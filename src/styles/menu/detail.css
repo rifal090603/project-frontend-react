@@ -1,0 +1,135 @@
+:root {
+  --color-cream: #f5f1e9;
+  --color-sage: #9caf88;
+  --color-brown: #6b4c3b;
+  --color-brown-dark: #4a3727;
+  --color-text: #3a2f23;
+  --font-family: "Georgia", serif;
+}
+
+.detail-container-macth {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.detail-gambar-info {
+  flex: 1 1 300px;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.info-detail-macth {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.macth-h1 {
+  font-size: 2.4rem;
+  color: var(--color-brown-dark);
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.macth-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--color-brown);
+  font-size: 1rem;
+}
+
+.quantity-input-detail-macth {
+  width: 80px;
+  margin-top: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--color-sage);
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--color-brown-dark);
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.quantity-input-detail-macth:focus {
+  border-color: var(--color-brown);
+  outline: none;
+}
+
+.add-cart-match {
+  margin-top: 18px;
+  padding: 10px 20px;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-cart-match:hover {
+  background-color: var(--color-sage);
+  color: var(--color-cream);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .detail-container-macth {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .detail-gambar-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .info-detail-macth {
+    width: 100%;
+  }
+
+  .macth-h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .add-cart-match {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .macth-h1 {
+    font-size: 1.6rem;
+  }
+
+  .quantity-input-detail-macth {
+    width: 60px;
+    font-size: 0.9rem;
+  }
+
+  .add-cart-match {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
