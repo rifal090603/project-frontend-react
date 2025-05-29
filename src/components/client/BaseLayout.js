@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "../../styles/base-layout.css";
 
 const BaseLayout = () => {
   const [query, setQuery] = useState("");
@@ -19,37 +18,66 @@ const BaseLayout = () => {
     <div className="d-flex flex-column min-vh-100">
       {/* Navbar */}
       <header>
-        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand fw-bold text-black" to="/">
               Coffee-Macth
             </Link>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <div className="collapse navbar-collapse justify-content-start" id="navbarNav">
+              <ul className="navbar-nav mb-2 mb-lg-0 w-100 text-start">
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">Home</Link>
+                  <Link className="nav-link nav-icon" to="/" title="Home">
+                    <i className="fas fa-home"></i>
+                    <span className="nav-text">Home</span>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/about">About</Link>
+                  <Link className="nav-link nav-icon" to="/about" title="About">
+                    <i className="fas fa-info-circle"></i>
+                    <span className="nav-text">About</span>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/menu">Menu All</Link>
+                  <Link className="nav-link nav-icon" to="/menu" title="Menu">
+                    <i className="fas fa-utensils"></i>
+                    <span className="nav-text">Menu</span>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/auth/login">Login</Link>
+                  <Link className="nav-link nav-icon" to="/auth/login" title="Login">
+                    <i className="fas fa-sign-in-alt"></i>
+                    <span className="nav-text">Login</span>
+                  </Link>
                 </li>
               </ul>
               <form className="d-flex" onSubmit={handleSearchSubmit}>
-                <input className="form-control" type="search" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} />
-                <button className="btn btn-outline-success ms-2" type="submit">Search</button>
+                <input
+                  className="form-control"
+                  type="search"
+                  placeholder="Search"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                />
+                <button className="btn btn-outline-success ms-2" type="submit">
+                  <i className="fas fa-search"></i>
+                </button>
               </form>
-              <Link to="/cart/view" className="btn btn-outline-primary position-relative ms-3">
-                🛒 Keranjang
+              <Link
+                to="/cart/view"
+                className="btn btn-outline-success position-relative ms-3"
+                title="Keranjang"
+              >
+                <i className="fas fa-shopping-cart"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  0
+                  
                 </span>
               </Link>
             </div>
@@ -57,7 +85,7 @@ const BaseLayout = () => {
         </nav>
       </header>
 
-      {/* Spacer untuk menghindari konten ketutupan navbar */}
+      {/* Spacer untuk konten */}
       <div style={{ paddingTop: "80px" }}></div>
 
       {/* Main Content */}

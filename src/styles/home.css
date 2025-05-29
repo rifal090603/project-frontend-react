@@ -2,203 +2,205 @@
    GLOBAL STYLES & VARIABLES
 ============================================ */
 :root {
-    --cream: #f8f5f0;
-    --coklat-tua: #5d4037;
-    --coklat-muda: #a1887f;
-    --hijau: #556b2f;
-    --hijau-muda: #8fbc8f;
-    --putih: #ffffff;
-    --orange-muda: #ffe5b4;
+  --cream: #f8f5f0;
+  --coklat-tua: #5d4037;
+  --coklat-muda: #a1887f;
+  --hijau: #556b2f;
+  --hijau-muda: #8fbc8f;
+  --putih: #ffffff;
+  --orange-muda: #ffe5b4;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lora:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Lora:wght@400;600&display=swap");
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Lora', serif;
-    background-color: var(--cream);
-    color: var(--coklat-tua);
-    width: 100%;
-    overflow-x: hidden; 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  background-color: var(--cream);
+  color: var(--coklat-tua);
+  width: 100%;
+  overflow-x: hidden;
 }
-
 
 /* ============================================
    HERO SECTION
 ============================================ */
 .jumbotron {
-    background: linear-gradient(rgba(93, 64, 55, 0.75), rgba(93, 64, 55, 0.75)),
-        url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center;
-    background-size: cover;
-    color: var(--cream);
-    padding: 120px 20px;
-    text-align: center;
-    border-bottom: 8px solid var(--coklat-muda);
-    border-radius: 0 0 40px 40px;
+  background: linear-gradient(rgba(93, 64, 55, 0.75), rgba(93, 64, 55, 0.75)), url("../assets/images/home.jpg") no-repeat center center;
+  background-size: cover;
+  color: var(--cream);
+  padding: 120px 20px;
+  text-align: center;
+  border-bottom: 8px solid var(--coklat-muda);
+  border-radius: 0 0 40px 40px;
+  margin-top: -10px; /* atau lebih kecil/besar tergantung tinggi navbar */
+  padding-top: 190px;
 }
 
 .jumbotron .display-4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .jumbotron .lead {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 .jumbotron .btn {
-    background-color: var(--hijau);
-    color: var(--cream);
-    padding: 14px 40px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    transition: 0.4s ease;
+  background-color: var(--hijau);
+  color: var(--cream);
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.4s ease;
 }
 
 .jumbotron .btn:hover {
-    background-color: var(--hijau-muda);
-    color: var(--coklat-tua);
-    transform: scale(1.05);
+  background-color: var(--hijau-muda);
+  color: var(--coklat-tua);
+  transform: scale(1.05);
 }
 
 /* ============================================
    SECTION HEADERS
 ============================================ */
 h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;
-    text-align: center;
-    margin: 60px 0 40px;
-    position: relative;
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 60px 0 40px;
+  position: relative;
 }
 
 h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--hijau);
-    margin: 20px auto 0;
-    border-radius: 2px;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--hijau);
+  margin: 20px auto 0;
+  border-radius: 2px;
 }
 
 /* ============================================
    RECOMMENDATION CARDS
 ============================================ */
 .recommendation-card {
-    background-color: var(--putih);
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(93, 64, 55, 0.1);
-    transition: 0.4s ease;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 420px;
-    margin-bottom: 30px;
+  background-color: var(--putih);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(93, 64, 55, 0.1);
+  transition: 0.4s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  margin-bottom: 30px;
 }
 
 .recommendation-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(93, 64, 55, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(93, 64, 55, 0.2);
 }
 
 .recommendation-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-    border-bottom: 1px solid #ddd;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-bottom: 1px solid #ddd;
 }
 
 .recommendation-card:hover img {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .recommendation-card .card-body {
-    padding: 20px;
-    background: var(--cream);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+  padding: 20px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .recommendation-card .card-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--coklat-tua);
-    margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--coklat-tua);
+  margin-bottom: 10px;
 }
 
 .recommendation-card .card-text {
-    color: var(--hijau);
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+  color: var(--hijau);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .recommendation-card .btn-home {
-    background-color: var(--hijau);
-    color: var(--cream);
-    display: inline-block;
-    width: auto;  
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: 0.3s ease;
+  background-color: var(--hijau);
+  color: var(--cream);
+  display: inline-block;
+  width: auto;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .recommendation-card .btn:hover {
-    background-color: var(--hijau-muda);
-    color: var(--coklat-tua);
-    transform: scale(1.05);
+  background-color: var(--hijau-muda);
+  color: var(--coklat-tua);
+  transform: scale(1.05);
 }
 
 /* ============================================
    RESPONSIVE
 ============================================ */
 @media (max-width: 768px) {
-    h2 {
-        font-size: 2.2rem;
-    }
+  h2 {
+    font-size: 2.2rem;
+  }
 
-    .jumbotron {
-        padding: 80px 10px;
-    }
+  .jumbotron {
+    padding: 80px 10px;
+    margin-top: -20px;
+  }
 
-    .jumbotron .display-4 {
-        font-size: 2.8rem;
-    }
+  .jumbotron .display-4 {
+    font-size: 2.8rem;
+  }
 
-    .jumbotron .lead {
-        font-size: 1.2rem;
-    }
+  .jumbotron .lead {
+    font-size: 1.2rem;
+  }
 
-    .recommendation-card img {
-        height: 180px;
-    }
+  .recommendation-card img {
+    height: 180px;
+  }
 
-    .recommendation-card .card-title {
-        font-size: 1.3rem;
-    }
+  .recommendation-card .card-title {
+    font-size: 1.3rem;
+  }
 
-    .recommendation-card .card-text {
-        font-size: 1rem;
-    }
+  .recommendation-card .card-text {
+    font-size: 1rem;
+  }
 
-    .recommendation-card .btn {
+  .recommendation-card .btn {
     display: inline-block;
     width: auto;
     font-size: 0.9rem;
@@ -207,15 +209,15 @@ h2::after {
 }
 
 @media (max-width: 576px) {
-    .recommendation-card img {
-        height: 160px;
-    }
+  .recommendation-card img {
+    height: 160px;
+  }
 
-    .recommendation-card .card-title {
-        font-size: 1.2rem;
-    }
+  .recommendation-card .card-title {
+    font-size: 1.2rem;
+  }
 
-    .recommendation-card .card-text {
-        font-size: 0.95rem;
-    }
+  .recommendation-card .card-text {
+    font-size: 0.95rem;
+  }
 }

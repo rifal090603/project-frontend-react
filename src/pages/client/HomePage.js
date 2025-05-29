@@ -14,7 +14,7 @@ export default function HomePage() {
         console.log("📦 Rekomendasi dari localStorage:", parsed);
         setRecommendations(parsed);
       } catch (e) {
-        console.error("❌ Gagal parse rekomendasi dari localStorage:", e);
+        console.error(" Gagal parse rekomendasi dari localStorage:", e);
       }
     }
     setLoading(false);
