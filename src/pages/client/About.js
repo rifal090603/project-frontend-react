@@ -8,11 +8,13 @@ import "animate.css";
 const About = () => {
   return (
     <div className="container my-5 px-3 px-md-5 container-awal">
-      {/* Deskripsi */}
+      {/* Tentang Kami */}
       <div className="text-center mb-5 deskripsi animate__animated animate__fadeInUp">
         <h1 className="display-4 fw-bold mb-3">Tentang Coffee Match</h1>
         <p className="lead text-muted">
-          Coffee Match adalah rumah bagi pecinta kopi yang mencari lebih dari sekadar minuman — kami menyajikan pengalaman...
+          Selamat datang di <strong>Coffee Match</strong> — bukan sekadar kedai kopi, tapi tempat di mana cerita dimulai dan koneksi tercipta.
+          Kami percaya bahwa setiap cangkir kopi memiliki kisahnya sendiri, diseduh dengan sepenuh hati untuk menciptakan momen berkesan bagi siapa pun yang datang.
+          Dari aroma biji kopi pilihan hingga kenyamanan suasana, kami hadir untuk menjadi rumah kedua bagi para pecinta kopi sejati.
         </p>
         <img
           src={coffeeImage}
@@ -22,11 +24,11 @@ const About = () => {
         />
       </div>
 
-      {/* Misi */}
+      {/* Misi Kami */}
       <div className="my-5 text-center misi-coffe animate__animated animate__fadeInLeft">
         <h2 className="mb-3">Misi Kami</h2>
         <p className="fs-5 text-muted w-75 mx-auto">
-          Menjadi kedai kopi pilihan utama...
+          Menjadi kedai kopi pilihan utama yang mengedepankan kualitas, kenyamanan, dan kehangatan interaksi — tempat di mana kopi menjadi jembatan untuk cerita dan kebersamaan.
         </p>
       </div>
 
@@ -50,6 +52,19 @@ const About = () => {
         <p className="fs-5 text-muted">
           <strong>Sabtu - Minggu:</strong> 09.00 - 23.00
         </p>
+      </div>
+
+      {/* Layanan Kami */}
+      <div className="text-center my-5 layanan-kami animate__animated animate__fadeInUp">
+        <h3 className="mb-3">Layanan yang Tersedia</h3>
+        <p className="fs-5 text-muted w-75 mx-auto">
+          Kami menyediakan berbagai layanan untuk kenyamanan dan kebutuhan Anda:
+        </p>
+        <ul className="list-unstyled fs-5 text-muted">
+          <li><strong>Dine-In</strong> – Nikmati suasana nyaman dan hangat di tempat kami</li>
+          <li><strong>Delivery</strong> – Pengantaran cepat hingga radius <strong>4 km</strong> dari lokasi kami</li>
+          <li><strong>Takeaway</strong> – Pesan dan ambil langsung, cocok untuk yang punya aktivitas padat</li>
+        </ul>
       </div>
 
       {/* Sosial Media */}
