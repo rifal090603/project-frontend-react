@@ -11,7 +11,6 @@ export default function DashboardHome() {
     async function fetchData() {
       try {
         const statsData = await getDashboardData();
-        console.log("Stats Data:", statsData);
         setStats(statsData);
         setMenus(statsData.menus || []); // Ambil menu langsung dari statsData
       } catch (error) {
@@ -84,37 +83,39 @@ export default function DashboardHome() {
         </div>
 
         <h2>Daftar Menu</h2>
-        <table className="table table-striped table-hover table-bordered">
-          <thead className="table-success">
-            <tr>
-              <th>ID</th>
-              <th>Nama Menu</th>
-              <th>Harga</th>
-              <th>Stock</th>
-              <th>Deskripsi</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            {menus.map((menu) => (
-              <tr key={menu.id}>
-                <td>{menu.id}</td>
-                <td>{menu.nama}</td>
-                <td>Rp {menu.harga}</td>
-                <td>{menu.stock}</td>
-                <td>{menu.deskripsi || "-"}</td>
-                <td>
-                  <a href={`/dashboard/edit-menu/${menu.id}`} className="btn btn-warning btn-sm">
-                    Edit
-                  </a>
-                  <button className="btn btn-danger btn-sm ms-2" onClick={() => handleDelete(menu.id)}>
-                    Hapus
-                  </button>
-                </td>
+        <div style={{ overflowX: "auto" }}>
+          <table className="table table-striped table-hover table-bordered">
+            <thead className="table-success">
+              <tr>
+                <th>ID</th>
+                <th>Nama Menu</th>
+                <th>Harga</th>
+                <th>Stock</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {menus.map((menu) => (
+                <tr key={menu.id}>
+                  <td>{menu.id}</td>
+                  <td>{menu.nama}</td>
+                  <td>Rp {menu.harga}</td>
+                  <td>{menu.stock}</td>
+                  <td>{menu.deskripsi || "-"}</td>
+                  <td>
+                    <a href={`/dashboard/edit-menu/${menu.id}`} className="btn btn-warning btn-sm">
+                      Edit
+                    </a>
+                    <button className="btn btn-danger btn-sm ms-2" onClick={() => handleDelete(menu.id)}>
+                      Hapus
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   );
