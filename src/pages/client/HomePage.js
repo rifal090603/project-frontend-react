@@ -11,7 +11,6 @@ export default function HomePage() {
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
-        console.log("📦 Rekomendasi dari localStorage:", parsed);
         setRecommendations(parsed);
       } catch (e) {
         console.error(" Gagal parse rekomendasi dari localStorage:", e);
@@ -23,12 +22,12 @@ export default function HomePage() {
   return (
     <>
       <div className="jumbotron text-white text-center py-5 bg-dark animate__animated animate__fadeInDown">
-        <h1 className="display-4">Welcome to Our Coffee Macth!</h1>
-        <p className="lead">Enjoy the finest coffee and snacks at your fingertips</p>
+        <h1 className="display-4">Selamat Datang di Coffee Macth!</h1>
+        <p className="lead">Nikmati kopi dan camilan terbaik hanya dalam genggaman</p>
         <hr className="my-4" />
-        <p>Browse our menu and explore the best offerings!</p>
+        <p>Jelajahi menu kami dan temukan pilihan terbaik untuk Anda!</p>
         <a className="btn btn-light btn-lg" href="/menu">
-          Explore Menu
+          Lihat Menu
         </a>
       </div>
 
@@ -45,7 +44,7 @@ export default function HomePage() {
               recommendations.map((item) => (
                 <div key={item.id} className="col-6 col-md-4 col-lg-3">
                   <div className="recommendation-card h-100">
-                    <img src={typeof item.image === "string" && item.image.trim() !== "" ? `http://localhost:5000/static/upload/${item.image}` : "/default-image.jpg"} alt={item.nama} />
+                    <img src={typeof item.image === "string" && item.image.trim() !== "" ? `http://3.106.228.0:8999/static/upload/${item.image}` : "/default-image.jpg"} alt={item.nama} />
                     <div className="card-body">
                       <h5 className="card-title">{item.nama}</h5>
                       <p className="card-text">Rp {item.harga}</p>

@@ -42,13 +42,8 @@ const SearchResult = () => {
         {results.length > 0 ? (
           results.map((menu, index) => (
             <div key={menu.id} className="menu-card animate__animated animate__fadeInUp" style={{ animationDelay: `${index * 0.1}s` }}>
-              {menu.image && (
-                <img
-                  src={`http://localhost:5000/static/upload/${menu.image}`}
-                  alt={menu.nama}
-                  className="menu-image"
-                />
-              )}
+              <img src={typeof menu.image === "string" && menu.image.trim() !== "" ? `http://3.106.228.0:8999/static/upload/${menu.image}` : "/default-image.jpg"} alt={menu.nama} className="menu-image" />
+
               <div className="menu-content">
                 <h3 className="menu-name">{menu.nama}</h3>
                 <p className="menu-category">{menu.category}</p>

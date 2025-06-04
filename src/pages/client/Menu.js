@@ -104,14 +104,14 @@ const Menu = () => {
         {menus.length > 0 ? (
           menus.map((menu, index) => (
             <div key={menu.id} className={`menu-card animate__animated animate__fadeInUp`} style={{ animationDelay: `${index * 0.15}s` }}>
-              {menu.image && <img src={`http://localhost:5000/static/upload/${menu.image}`} alt={menu.nama} className="menu-image" />}
+              <img src={typeof menu.image === "string" && menu.image.trim() !== "" ? `http://3.106.228.0:8999/static/upload/${menu.image}` : "/default-image.jpg"} alt={menu.nama} className="menu-image" />
+
               <div className="menu-content">
                 <h3 className="menu-name">{menu.nama}</h3>
                 <p className="menu-category">{menu.category}</p>
                 {/* Deskripsi dipotong hanya 5 kata */}
                 <p className="menu-description">{truncateWords(menu.deskripsi, 5) || "Tidak ada deskripsi."}</p>
                 <p className="menu-price">Harga: Rp {menu.harga}</p>
-                <p className="menu-stock">Stok: {menu.stock}</p>
 
                 <form
                   className="add-to-cart-form"
@@ -128,7 +128,9 @@ const Menu = () => {
                 </form>
 
                 {/* Tombol Lihat Detail */}
-                <Link to={`/menu/detail/${menu.id}`} className="detail-button">Lihat Detail</Link>
+                <Link to={`/menu/detail/${menu.id}`} className="detail-button">
+                  Lihat Detail
+                </Link>
               </div>
             </div>
           ))

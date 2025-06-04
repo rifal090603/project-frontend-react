@@ -90,6 +90,8 @@
   color: var(--color-cream);
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .detail-container-macth {

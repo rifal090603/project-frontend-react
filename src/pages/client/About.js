@@ -1,5 +1,5 @@
 import React from "react";
-import coffeeImage from "../../assets/images/coffee-shop.jpg";
+import coffeeImage from "../../assets/images/image.png";
 import foundedImage from "../../assets/images/jejak.png";
 import "../../styles/about.css";
 import { FaInstagram, FaTiktok, FaFacebook, FaWhatsapp } from "react-icons/fa";
@@ -10,9 +10,9 @@ const About = () => {
     <div className="container my-5 px-3 px-md-5 container-awal">
       {/* Tentang Kami */}
       <div className="text-center mb-5 deskripsi animate__animated animate__fadeInUp">
-        <h1 className="display-4 fw-bold mb-3">Tentang Coffee Match</h1>
+        <h1 className="display-4 fw-bold mb-3">Tentang Coffee Macth</h1>
         <p className="lead text-muted">
-          Selamat datang di <strong>Coffee Match</strong> — bukan sekadar kedai kopi, tapi tempat di mana cerita dimulai dan koneksi tercipta.
+          Selamat datang di <strong>Coffee Macth</strong> — bukan sekadar kedai kopi, tapi tempat di mana cerita dimulai dan koneksi tercipta.
           Kami percaya bahwa setiap cangkir kopi memiliki kisahnya sendiri, diseduh dengan sepenuh hati untuk menciptakan momen berkesan bagi siapa pun yang datang.
           Dari aroma biji kopi pilihan hingga kenyamanan suasana, kami hadir untuk menjadi rumah kedua bagi para pecinta kopi sejati.
         </p>
@@ -62,7 +62,7 @@ const About = () => {
         </p>
         <ul className="list-unstyled fs-5 text-muted">
           <li><strong>Dine-In</strong> – Nikmati suasana nyaman dan hangat di tempat kami</li>
-          <li><strong>Delivery</strong> – Pengantaran cepat hingga radius <strong>4 km</strong> dari lokasi kami</li>
+          <li><strong>Delivery</strong> – Pengantaran cepat hingga radius <strong>10 km</strong> dari lokasi kami</li>
           <li><strong>Takeaway</strong> – Pesan dan ambil langsung, cocok untuk yang punya aktivitas padat</li>
         </ul>
       </div>

@@ -5,7 +5,7 @@
   --cream: #f8f5f0;
   --coklat-tua: #5d4037;
   --coklat-muda: #a1887f;
-  --hijau: #556b2f;
+  --hijau: #c4a36d;
   --hijau-muda: #8fbc8f;
   --putih: #ffffff;
   --orange-muda: #ffe5b4;
@@ -140,6 +140,10 @@ h2::after {
   margin-bottom: 10px;
 }
 
+.section-rekomendasi .row {
+    row-gap: 1.5rem; 
+  }
+
 .recommendation-card .card-text {
   color: var(--hijau);
   font-size: 1.1rem;
@@ -153,7 +157,7 @@ h2::after {
   display: inline-block;
   width: auto;
   padding: 10px 24px;
-  border-radius: 50px;
+  border-radius: 12px; 
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -161,7 +165,7 @@ h2::after {
   transition: 0.3s ease;
 }
 
-.recommendation-card .btn:hover {
+.recommendation-card .btn-home:hover {
   background-color: var(--hijau-muda);
   color: var(--coklat-tua);
   transform: scale(1.05);
@@ -192,6 +196,10 @@ h2::after {
     height: 180px;
   }
 
+  .section-rekomendasi .row {
+    row-gap: 1.5rem; /* jarak antar card */
+  }
+
   .recommendation-card .card-title {
     font-size: 1.3rem;
   }
@@ -200,7 +208,7 @@ h2::after {
     font-size: 1rem;
   }
 
-  .recommendation-card .btn {
+  .recommendation-card .btn-home {
     display: inline-block;
     width: auto;
     font-size: 0.9rem;

@@ -201,7 +201,7 @@ const CartView = () => {
                 <option value="takeaway">Takeaway</option>
               </select>
 
-              {form.order_type === "delivery" && <p className="text-danger mt-2">* Layanan delivery hanya tersedia dalam radius 4 km dari lokasi toko.</p>}
+              {form.order_type === "delivery" && <p className="text-danger mt-2">* Layanan delivery hanya tersedia dalam radius 10 km dari lokasi toko.</p>}
             </div>
 
             {form.order_type === "delivery" && (
