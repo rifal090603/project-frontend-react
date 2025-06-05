@@ -10,6 +10,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -33,7 +34,6 @@ const LoginPage = () => {
       } else {
         navigate("/");
       }
-
     } catch (error) {
       console.error("Login gagal:", error);
       setErrorMessage(error.message || "Login gagal. Periksa kembali data Anda.");
@@ -50,26 +50,17 @@ const LoginPage = () => {
         <form onSubmit={handleLogin} className="login-form-base animate__animated animate__fadeInDown animate__delay-1s">
           <div className="form-group-base">
             <label htmlFor="username">Username</label>
-            <input
-              id="username"
-              type="text"
-              required
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="input-field"
-            />
+            <input id="username" type="text" required value={username} onChange={(e) => setUsername(e.target.value)} className="input-field" />
           </div>
 
           <div className="form-group-base">
             <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="input-field"
-            />
+            <div className="password-wrapper">
+              <input id="password" type={showPassword ? "text" : "password"} required value={password} onChange={(e) => setPassword(e.target.value)} className="input-field" />
+              <button type="button" onClick={() => setShowPassword(!showPassword)} className="toggle-password">
+                {showPassword ? "👀" : "👁️"}
+              </button>
+            </div>
           </div>
 
           <button type="submit" className="btn-login-base animate__animated animate__zoomIn animate__delay-2s">

@@ -122,8 +122,8 @@ const Menu = () => {
                   }}
                 >
                   <input type="number" name="quantity" className="quantity-input" defaultValue={1} min={1} max={menu.stock} />
-                  <button type="submit" className="add-to-cart-button">
-                    Tambah ke Keranjang
+                  <button type="submit" className="add-to-cart-button" title="Tambah ke Keranjang">
+                    <i className="fas fa-cart-plus"></i>
                   </button>
                 </form>
 

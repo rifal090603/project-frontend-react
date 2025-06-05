@@ -82,6 +82,7 @@
     text-decoration: underline;
   }
   
+  
   .error-message {
     color: var(--error-red);
     background-color: #ffeaea;

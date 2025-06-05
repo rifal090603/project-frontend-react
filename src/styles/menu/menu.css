@@ -171,7 +171,7 @@
 }
 
 .quantity-input {
-  width: 60px;
+  width: 200px;
   padding: 6px 10px;
   border: 2px solid var(--color-sage);
   border-radius: 8px;
@@ -241,6 +241,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -259,7 +261,7 @@
   }
 
   .quantity-input {
-    width: 50px;
+    width: 75px;
     font-size: 0.9rem;
   }
 
