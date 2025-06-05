@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://13.236.85.191:9100',
+  baseURL: 'https://coffee-macth.my.id',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //  Buat instance Axios
 const api = axios.create({
-  baseURL: 'http://3.106.228.0:8999', 
+  baseURL: 'https://coffee-macth.shop', 
   withCredentials: true,  
 });
 

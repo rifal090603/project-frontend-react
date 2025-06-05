@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-//  Buat instance Axios
+// Buat instance Axios
 const api = axios.create({
-  baseURL: 'http://3.106.228.0:8999', 
+  baseURL: 'https://coffee-macth.shop',
   withCredentials: true,
 });
 
-//  Interceptor untuk sisipkan token Authorization (Bearer <token>)
+// Interceptor untuk sisipkan token Authorization (Bearer <token>)
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('access_token'); 
+  const token = localStorage.getItem('access_token');
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }
@@ -17,10 +17,9 @@ api.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
-
 // ========== MENU API ==========
 
-//  Get semua menu
+// Get semua menu
 export const getMenus = async (category = null, page = 1) => {
   try {
     const validPage = Number.isInteger(page) && page > 0 ? page : 1;
@@ -29,50 +28,38 @@ export const getMenus = async (category = null, page = 1) => {
     if (category) params.category = category;
     params.page = validPage;
 
-    const token = localStorage.getItem("access_token");
-
-    const response = await api.get("/menu", {
-      params,
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const response = await api.get("/menu", { params });
 
     return response.data;
   } catch (error) {
     console.error("Error fetching menus:", error);
-    throw error;
+    throw new Error(error.response?.data?.message || "Gagal mengambil data menu");
   }
 };
 
-
-
-//  Get menu berdasarkan ID
+// Get menu berdasarkan ID
 export const getMenuById = async (menuId) => {
   try {
     const response = await api.get(`/menu/${menuId}`);
     return response.data;
   } catch (error) {
-    throw new Error("Gagal mengambil menu berdasarkan ID");
+    throw new Error(error.response?.data?.message || "Gagal mengambil menu berdasarkan ID");
   }
 };
 
-//  Search menu berdasarkan query string
+// Search menu berdasarkan query string
 export const searchMenu = async (query) => {
   try {
-    const response = await api.get('/menu/search', {
-      params: { query },
-    });
+    const response = await api.get('/menu/search', { params: { query } });
     return response.data;
   } catch (error) {
-    throw new Error("Gagal melakukan pencarian menu");
+    throw new Error(error.response?.data?.message || "Gagal melakukan pencarian menu");
   }
 };
-
 
 // ========== AUTH ==========
 
-//  Register client
+// Register client
 export const registerUser = async (formData) => {
   try {
     const response = await api.post('/auth/register', formData, {
@@ -84,7 +71,7 @@ export const registerUser = async (formData) => {
   }
 };
 
-//  Register admin
+// Register admin
 export const registerAdmin = async (formData) => {
   try {
     const response = await api.post('/auth/register-admin', formData, {
@@ -111,60 +98,51 @@ export const loginUser = async (formData) => {
   }
 };
 
-//  Logout user (optional jika backend support logout)
+// Logout user (optional jika backend support logout)
 export const logoutUser = async () => {
   try {
     const response = await api.post('/auth/logout');
     localStorage.removeItem('access_token');
     return response.data;
   } catch (error) {
-    throw new Error("Gagal logout");
+    throw new Error(error.response?.data?.message || "Gagal logout");
   }
 };
 
-
 // ========== CART API ==========
 
+// View cart
 export const viewCart = async () => {
   try {
     const response = await api.get('/cart/view');
     return response.data;
   } catch (error) {
-    throw new Error("Gagal mengambil data cart");
+    throw new Error(error.response?.data?.message || "Gagal mengambil data cart");
   }
 };
 
+// Add to cart
 export const addToCart = async (menuId, quantity) => {
   try {
-    const token = localStorage.getItem("token");
-
-    const response = await api.post(
-      "/cart/add",
-      { menuId, quantity },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`, 
-        },
-      }
-    );
-
+    const response = await api.post("/cart/add", { menuId, quantity });
     return response.data;
   } catch (error) {
     console.error("Error details:", error.response ? error.response.data : error.message);
-    throw new Error("Gagal menambahkan menu ke keranjang");
+    throw new Error(error.response?.data?.message || "Gagal menambahkan menu ke keranjang");
   }
 };
 
-
+// Remove from cart
 export const removeFromCart = async (product_id) => {
   try {
     const response = await api.delete(`/cart/remove/${product_id}`);
     return response.data;
   } catch (error) {
-    throw new Error("Gagal menghapus menu dari keranjang");
+    throw new Error(error.response?.data?.message || "Gagal menghapus menu dari keranjang");
   }
 };
 
+// Checkout cart
 export const checkoutCart = async (formDataObj) => {
   try {
     const response = await api.post('/cart/checkout', formDataObj, {
@@ -172,15 +150,16 @@ export const checkoutCart = async (formDataObj) => {
     });
     return response.data;
   } catch (error) {
-    throw new Error("Gagal melakukan checkout");
+    throw new Error(error.response?.data?.message || "Gagal melakukan checkout");
   }
 };
 
+// Get payment info by transaction id
 export const getPaymentInfo = async (transaction_id) => {
   try {
     const response = await api.get(`/cart/payment/${transaction_id}`);
     return response.data;
   } catch (error) {
-    throw new Error("Gagal mengambil informasi pembayaran");
+    throw new Error(error.response?.data?.message || "Gagal mengambil informasi pembayaran");
   }
 };
