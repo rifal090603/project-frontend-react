@@ -27,12 +27,11 @@ import CreateMenu from "./pages/admin/CreateMenu";
 import DataTransaksi from "./pages/admin/DataTransaksi";
 import EditMenuForm from "./pages/admin/EditMenuForm";
 import DataUser from "./pages/admin/DataUser";
+import RequireAdmin from "./components/RequireAdmin";
 
-import NotFound from "./components/NotFound"
-
+import NotFound from "./components/NotFound";
 
 export default function App() {
-
   const user_id = localStorage.getItem("user_id");
   return (
     <Router>
@@ -46,24 +45,31 @@ export default function App() {
           <Route path="/auth/register-admin" element={<RegisterPageAdmin />} />
           <Route path="/menu/:category?" element={<Menu />} />
           <Route path="/search" element={<SearchResult />} />
-          <Route path="/cart/view" element={<CartView/>} />
-          <Route path="/cart/checkout" element={<CheckoutSuccess/>} />
-          <Route path="/cart/checkout-payment" element={<CheckoutPayment/>} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/cart/view" element={<CartView />} />
+          <Route path="/cart/checkout" element={<CheckoutSuccess />} />
+          <Route path="/cart/checkout-payment" element={<CheckoutPayment />} />
+          <Route path="/about" element={<About />} />
           <Route path="/menu/detail/:id" element={<MenuDetail />} />
         </Route>
 
         {/* Admin Routes with Dashboard Layout */}
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAdmin>
+              <DashboardLayout />
+            </RequireAdmin>
+          }
+        >
           <Route index element={<DashboardHome />} />
           <Route path="create-menu" element={<CreateMenu />} />
-          <Route path="transactions" element={<DataTransaksi/>} />
-          <Route path="edit-menu/:menuId" element={<EditMenuForm/>} />
-          <Route path="users" element={<DataUser/>} />
+          <Route path="transactions" element={<DataTransaksi />} />
+          <Route path="edit-menu/:menuId" element={<EditMenuForm />} />
+          <Route path="users" element={<DataUser />} />
           {/* <Route path="transactions" element={<Transactions />} />
           <Route path="users" element={<Users />} /> */}
         </Route>
-        
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
