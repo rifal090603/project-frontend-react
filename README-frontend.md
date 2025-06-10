@@ -28,6 +28,10 @@ Ini adalah frontend dari aplikasi **Coffee Match**, dibangun dengan React menggu
 
 > Secara default akan berjalan di `http://localhost:3000`
 
+## Admin
+- masuk ke http://localhost:3000/auth/register-admin
+- buat admin, lalu login seperti biasa
+
 ## Koneksi ke Backend
 Pastikan backend sudah dijalankan di `http://localhost:5000` (default Flask).
 Jika perlu, atur URL backend di file konfigurasi API.
