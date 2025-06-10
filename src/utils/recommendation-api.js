@@ -1,22 +1,22 @@
 // recommendation-api.js
-import axios from 'axios';
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://coffee-macth.my.id',
+  baseURL: "http://localhost:5000",
   withCredentials: true,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
 export const getRecommendationsById = async (id) => {
   try {
-    const response = await api.post('/ml/', { id });
+    const response = await api.post("/ml/", { id });
 
     if (response.data && Array.isArray(response.data.recommendations)) {
-      const cleaned = response.data.recommendations.map(item => ({
+      const cleaned = response.data.recommendations.map((item) => ({
         ...item,
-        image: typeof item.image === 'string' ? item.image : null, // ubah NaN jadi null
+        image: typeof item.image === "string" ? item.image : null, // ubah NaN jadi null
       }));
       console.log("✅ API success, cleaned recommendations:", cleaned);
       return cleaned;
@@ -25,7 +25,7 @@ export const getRecommendationsById = async (id) => {
       return [];
     }
   } catch (error) {
-    console.error('Gagal mengambil rekomendasi:', error.response?.data || error.message);
+    console.error("Gagal mengambil rekomendasi:", error.response?.data || error.message);
     return [];
   }
 };

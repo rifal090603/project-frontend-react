@@ -44,7 +44,7 @@ export default function HomePage() {
               recommendations.map((item) => (
                 <div key={item.id} className="col-6 col-md-4 col-lg-3">
                   <div className="recommendation-card h-100">
-                    <img src={typeof item.image === "string" && item.image.trim() !== "" ? `https://coffee-macth.shop/static/upload/${item.image}` : "/default-image.jpg"} alt={item.nama} />
+                    <img src={typeof item.image === "string" && item.image.trim() !== "" ? `http://localhost:5000/static/upload/${item.image}` : "/default-image.jpg"} alt={item.nama} />
                     <div className="card-body">
                       <h5 className="card-title">{item.nama}</h5>
                       <p className="card-text">Rp {item.harga}</p>
