@@ -104,7 +104,7 @@ const Menu = () => {
         {menus.length > 0 ? (
           menus.map((menu, index) => (
             <div key={menu.id} className={`menu-card animate__animated animate__fadeInUp`} style={{ animationDelay: `${index * 0.15}s` }}>
-              <img src={typeof menu.image === "string" && menu.image.trim() !== "" ? `http://localhost:5000/static/upload/${menu.image}` : "/default-image.jpg"} alt={menu.nama} className="menu-image" />
+              <img src={typeof menu.image === "string" && menu.image.trim() !== "" ? `https://coffee-macth.shop/static/upload/${menu.image}` : "/default-image.jpg"} alt={menu.nama} className="menu-image" />
 
               <div className="menu-content">
                 <h3 className="menu-name">{menu.nama}</h3>
