@@ -37,15 +37,12 @@ Pastikan backend sudah dijalankan di `http://localhost:5000` (default Flask).
 Jika perlu, atur URL backend di file konfigurasi API.
 
 ## Api
-```bash
-Ubah api.js, dsahboard-api.js, Menu.js, SeacrcingResult.js dan DatailMenu.js
-dengan http://localhost:5000
-ubah bagian rekomemndation-api.js dengan http://localhost:5000
-```
+- Ubah api.js, dsahboard-api.js,HomePage.js, Menu.js, SeacrcingResult.js dan DatailMenu.js dengan http://localhost:5000
+- ubah bagian rekomemndation-api.js dengan http://localhost:5000
+
 
 ##  Teknologi yang Digunakan
 - React (CRA)
 - Axios
-- React Router DOM
 - CSS
 

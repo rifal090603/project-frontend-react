@@ -8,7 +8,7 @@ const DashboardLayout = () => {
       <header className="dashboard-header">
         <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary dashboard-navbar">
           <div className="container-fluid dashboard-navbar-container">
-            <a className="navbar-brand me-4 dashboard-navbar-brand" href="/dashboard">Coffee-Match</a>
+            <a className="navbar-brand me-4 dashboard-navbar-brand" href="/dashboard">Coffee-Macth</a>
             <button
               className="navbar-toggler dashboard-navbar-toggler"
               type="button"
