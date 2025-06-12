@@ -67,64 +67,66 @@ const DataUser = () => {
   return (
     <div className="container mt-4">
       <h1 className="text-center mb-4">Data User</h1>
-
       <h2>Admin</h2>
-      <table className="table table-striped table-hover table-bordered">
-        <thead className="table-success">
-          <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          {admins.map((admin) => (
-            <tr key={admin.id}>
-              <td>{admin.id}</td>
-              <td>{admin.username}</td>
-              <td>{admin.email}</td>
-              <td>
-                <button
-                  className="btn btn-danger btn-sm"
-                  onClick={() => handleDelete(admin.id)}
-                >
-                  Hapus
-                </button>
-              </td>
+      <div className="table-responsive">
+        {" "}
+        {/* Tambahkan ini */}
+        <table className="table table-striped table-hover table-bordered">
+          <thead className="table-success">
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Aksi</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
+          </thead>
+          <tbody>
+            {admins.map((admin) => (
+              <tr key={admin.id}>
+                <td>{admin.id}</td>
+                <td>{admin.username}</td>
+                <td>{admin.email}</td>
+                <td>
+                  <button className="btn btn-danger btn-sm" onClick={() => handleDelete(admin.id)}>
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>{" "}
+      {/* Tutup table-responsive */}
       <h2 className="mt-5">Client</h2>
-      <table className="table table-striped table-hover table-bordered">
-        <thead className="table-success">
-          <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Aksi</th>
-          </tr>
-        </thead>
-        <tbody>
-          {clients.map((client) => (
-            <tr key={client.id}>
-              <td>{client.id}</td>
-              <td>{client.username}</td>
-              <td>{client.email}</td>
-              <td>
-                <button
-                  className="btn btn-danger btn-sm"
-                  onClick={() => handleDelete(client.id)}
-                >
-                  Hapus
-                </button>
-              </td>
+      <div className="table-responsive">
+        {" "}
+        {/* Tambahkan ini juga */}
+        <table className="table table-striped table-hover table-bordered">
+          <thead className="table-success">
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Email</th>
+              <th>Aksi</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {clients.map((client) => (
+              <tr key={client.id}>
+                <td>{client.id}</td>
+                <td>{client.username}</td>
+                <td>{client.email}</td>
+                <td>
+                  <button className="btn btn-danger btn-sm" onClick={() => handleDelete(client.id)}>
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>{" "}
+      {/* Tutup table-responsive */}
     </div>
   );
 };
