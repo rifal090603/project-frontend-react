@@ -27,7 +27,7 @@ const CheckoutSuccess = () => {
           <p>Pembayaran Anda sedang diverifikasi.</p>
         )}
         <button className="btn btn-primary mt-4" onClick={() => navigate('/')}>
-          Kembali ke Menu
+          Kembali ke Home
         </button>
       </div>
     </div>
